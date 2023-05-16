@@ -1,0 +1,8 @@
+[Unit]
+Description=Suspend overnight
+
+[Service]
+Type=oneshot
+ExecStart=sleepy-time.sh "12 hours"
+User=root
+Group=systemd-journal

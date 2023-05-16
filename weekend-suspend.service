@@ -1,0 +1,8 @@
+[Unit]
+Description=Suspend on weekends
+
+[Service]
+Type=oneshot
+ExecStart=sleepy-time.sh "60 hours"
+User=root 
+Group=systemd-journal

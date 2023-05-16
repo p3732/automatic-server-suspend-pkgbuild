@@ -1,0 +1,9 @@
+[Unit]
+Description=Suspend over night
+
+[Timer]
+OnCalendar=Mon..Thu 20:30
+Unit=night-suspend.service
+
+[Install]
+WantedBy=timers.target

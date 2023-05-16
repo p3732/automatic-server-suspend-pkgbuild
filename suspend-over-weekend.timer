@@ -1,0 +1,9 @@
+[Unit]
+Description=Suspend over weekend
+
+[Timer]
+OnCalendar=Fri 20:30
+Unit=weekend-suspend.service
+
+[Install]
+WantedBy=timers.target
