@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Gonna take a nap for $1, nighty night."
 

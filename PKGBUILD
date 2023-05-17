@@ -6,20 +6,17 @@ pkgdesc="Suspend servers at night and on weekends"
 arch=('any')
 url="https://github.com/p3732/automatic-server-suspend-pkgbuild"
 license=('GPL3')
-source=(
-	sleepy-time.sh
-	night-suspend.service
-	weekend-suspend.service
-	suspend-at-night.timer
-	suspend-over-weekend.timer
-)
-sha256sums=(
-	'9d5e3e39595babad4927b11fff5763eaec3c1cb176874fa98ad4b1f409181270'
-	'dc6df1a3efe9929d09b9cfc0d4ceceda9c3de7a257109148eb1ef93586c406fa'
-	'edcd47b4dd39ad877ae00b744d6ab9d8798a9d96708f8993f1268d3f951b6b1f'
-	'5cb72b81170d4bab0b1d40629728bbc32142ec7e529c87bf9de7f6e3729c018e'
-	'191bb6b68b837bcd3688942c394dcacf785f6ff495aaa79c006937b59c18b9a7'
-)
+depends=(bash)
+source=('sleepy-time.sh'
+        'night-suspend.service'
+        'weekend-suspend.service'
+        'suspend-at-night.timer'
+        'suspend-over-weekend.timer')
+sha256sums=('602398a7ec115c18425d3813d4cc0665d45af4235c70611083cff6e041f4002f'
+            'dc6df1a3efe9929d09b9cfc0d4ceceda9c3de7a257109148eb1ef93586c406fa'
+            'edcd47b4dd39ad877ae00b744d6ab9d8798a9d96708f8993f1268d3f951b6b1f'
+            '5cb72b81170d4bab0b1d40629728bbc32142ec7e529c87bf9de7f6e3729c018e'
+            '191bb6b68b837bcd3688942c394dcacf785f6ff495aaa79c006937b59c18b9a7')
 
 package() {
   systemd_dir="$pkgdir/usr/lib/systemd/system/"
